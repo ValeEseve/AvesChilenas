@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto";
+  font-weight: 300;
+  background-color: rgb(185, 163, 137);
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: antiquewhite;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6rem;
+  padding: 0px 20px;
+}
+
+header img {
+  height: 3rem;
+  width: 10%;
+  object-fit: fill;
+}
+
+.filters,
+.render-birds,
+.card-title,
+.card-bird,
+.card-diet-icon,
+.card-car,
+.card-height,
+.card-diet,
+.card-habitat {
+  display: flex;
+}
+
+.filters,
+.card-title,
+.card-bird,
+.card-car {
+  flex-direction: column;
+}
+
+.filters {
+  background-color: bisque;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.render-birds {
+  background-color: burlywood;
+  padding: 20px;
+  align-items: center;
+}
+
+.card-bird {
+  padding: 1em;
+  width: 90%;
+  /* width: 15em; para la version de escritorio */
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.card-bird i{
+    font-size: 1.3rem;
+}
+
+.card-diet-icon{
+    padding: 5px;
+}
+
+.card-name {
+  font-weight: 800;
+  font-size: 1.4em;
+  padding: 0;
+}
+
+.card-c-name {
+  font-style: italic;
+}
+
+.card-height,
+.card-habitat,
+.card-diet {
+  gap: 15px;
+  align-items: center;
+}
+
+.card-btn{
+    border-radius: 5px;
+    margin-top: 10px;
+}

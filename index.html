@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aves chilenas</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/img/favicon-logo.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/4425dd6319.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header>
+      <img src="./assets/img/favicon-logo.png" alt="" />
+      <h1>Aves de Chile</h1>
+    </header>
+    <main>
+      <section class="filters">
+        <p>Filtros</p>
+        <form action="">
+          <select name="filters-select" id="filters-select">
+            <optgroup label="Zona">
+              <option value="norte">Norte</option>
+              <option value="centro">Centro</option>
+              <option value="sur">Sur</option>
+              <option value="insular">Chile Insular</option>
+            </optgroup>
+            <optgroup label="Dieta">
+              <option value="insectos">Insectos</option>
+              <option value="semillas">Semillas</option>
+              <option value="frutas">Frutas</option>
+              <option value="invertebrados-marinos">
+                Invertebrados marinos
+              </option>
+              <option value="crustaceos">Crustáceos</option>
+            </optgroup>
+            <optgroup label="Riesgo">
+              <option value="dd">Datos insuficientes</option>
+              <option value="preoc-menor">Preocupación menor</option>
+              <option value="vulnerable">Vulnerable</option>
+              <option value="en-peligro">En peligro</option>
+              <option value="en-peligro-crit">En peligro crítico</option>
+              <option value="vulnerable">Vulnerable</option>
+            </optgroup>
+          </select>
+        </form>
+      </section>
+      <section class="render-birds">
+        <article class="card-bird">
+          <div class="card-title">
+            <img src="${img}" class="card-img" alt="${nombre}" />
+            <p class="card-name">${nombre}</p>
+            <p class="card-c-name">${nombre_cientifico}</p>
+          </div>
+          <hr />
+          <div class="card-car">
+            <div class="card-height">
+              <i data-lucide="ruler"></i>
+              <p>${tamano} cm</p>
+            </div>
+            <div class="card-habitat">
+              <i data-lucide="house"></i>
+              <p>${habitat}</p>
+            </div>
+            <div class="card-diet">
+              <i class="fa-solid fa-utensils card-diet-icon"></i>
+              <div class="card-diet-icons">${dieta_icons}</div>
+            </div>
+          </div>
+          <button class="card-btn"><i data-lucide="volume-2"></i></button>
+        </article>
+      </section>
+    </main>
+    <footer></footer>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+    <script src="./assets/js/aves.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
