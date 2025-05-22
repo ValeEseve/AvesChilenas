@@ -34,11 +34,14 @@ header img {
 .card-car,
 .card-height,
 .card-diet,
-.card-habitat {
+.card-habitat,
+.card-location,
+.card-risk {
   display: flex;
 }
 
 .filters,
+.render-birds,
 .card-title,
 .card-bird,
 .card-car {
@@ -57,10 +60,11 @@ header img {
   background-color: burlywood;
   padding: 20px;
   align-items: center;
+  gap: 1rem;
 }
 
 .card-bird {
-  padding: 1em;
+  padding: 1rem;
   width: 90%;
   /* width: 15em; para la version de escritorio */
   border: 1px solid black;
@@ -68,7 +72,7 @@ header img {
 }
 
 .card-bird i{
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 
 .card-diet-icon{
@@ -79,6 +83,7 @@ header img {
   font-weight: 800;
   font-size: 1.4em;
   padding: 0;
+  margin-top: 1rem;
 }
 
 .card-c-name {
@@ -87,7 +92,9 @@ header img {
 
 .card-height,
 .card-habitat,
-.card-diet {
+.card-diet,
+.card-location,
+.card-risk {
   gap: 15px;
   align-items: center;
 }
