@@ -20,10 +20,9 @@ header {
   padding: 0px 20px;
 }
 
-header img {
-  height: 3rem;
-  width: 10%;
-  object-fit: fill;
+.header-icon{
+    width: 90px;
+    height: 90px;
 }
 
 #text{
@@ -70,9 +69,13 @@ header img {
 .card-bird {
   padding: 1rem;
   width: 90%;
-  /* width: 15em; para la version de escritorio */
   border: 1px solid black;
   border-radius: 5px;
+}
+
+.card-img{
+    height: 400px;
+    object-fit:cover;
 }
 
 .card-bird i{
@@ -106,4 +109,30 @@ header img {
 .card-btn{
     border-radius: 5px;
     margin-top: 10px;
+}
+
+@media (min-width : 576px) {
+     header img{
+        width: auto;
+    }
+
+    .render-birds{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .card-bird{
+        width: 44%; 
+    }
+
+}
+
+@media (min-width : 1200px) {
+    .card-bird{
+        width: 30%; 
+    }
+
+    .card-bird img{
+        height: 350px;
+    }
+
 }
