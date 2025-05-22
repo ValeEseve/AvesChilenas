@@ -1,6 +1,8 @@
 // Variables
+const select = document.querySelector("#filters-select")
 
-
+// Event listener
+select.addEventListener("change", () => filterAves())
 
 function renderBirds(db){
     const birds = document.querySelector(".render-birds")
@@ -38,12 +40,35 @@ function renderBirds(db){
                 <p>${ave.riesgo}</p>
             </div>
           </div>
-          <button class="card-btn"><i data-lucide="volume-2"></i></button>
+          <button class="card-btn" data-audio= ${ave.canto}><i data-lucide="volume-2"></i></button>
         `
         birds.appendChild(card)
     });
     lucide.createIcons()
+
+    const btns = document.querySelectorAll(".card-btn")
+
+    btns.forEach(btn =>{
+        btn.addEventListener("click", () => {
+            const audioSrc = btn.getAttribute("data-audio")
+            const audio = new Audio(audioSrc)
+            audio.play()
+        })
+    })
+}
+
+function filterAves(){
+    const filtro = document.querySelector("#filters-select").value.toString()
+    const lista = []
+    aves.forEach(ave => {
+        const birdValues = Object.values(ave).toString().toLowerCase()
+        if (birdValues.includes(filtro)){
+            lista.push(ave)
+        }
+    });
+    renderBirds(lista)
 }
 
 
+// Render
 renderBirds(aves)

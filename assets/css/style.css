@@ -26,6 +26,10 @@ header img {
   object-fit: fill;
 }
 
+#text{
+    padding: 1rem;
+}
+
 .filters,
 .render-birds,
 .card-title,
